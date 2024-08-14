@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "urban-university"
+version = "0.1.0"
+description = ""
+authors = ["deska13 <dkuzmin@axon.expert>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.1"
+ruff = "^0.5.7"
+pylint = "^3.2.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
