@@ -13,6 +13,7 @@ python = "^3.11"
 mypy = "^1.11.1"
 ruff = "^0.5.7"
 pylint = "^3.2.6"
+pre-commit = "^3.8.0"
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,0 +1,11 @@
+[BASIC]
+good-names =
+disable =
+    invalid-name,
+    missing-module-docstring,
+    comparison-of-constants,
+ignore-paths =
+    temp,
+extension-pkg-whitelist=
+    pydantic,
+    orjson,
