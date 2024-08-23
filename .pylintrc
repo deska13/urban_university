@@ -4,6 +4,7 @@ disable =
     invalid-name,
     missing-module-docstring,
     comparison-of-constants,
+    duplicate-value,
 ignore-paths =
     temp,
 extension-pkg-whitelist=
