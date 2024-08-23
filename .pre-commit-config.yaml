@@ -3,16 +3,16 @@ repos:
   - repo: local
     hooks:
       - id: system
-        name: ruff format
-        entry: poetry run ruff format
+        name: black format
+        entry: poetry run black .
         types:
           - python
         language: system
   - repo: local
     hooks:
       - id: system
-        name: ruff lint
-        entry: poetry run ruff check --fix
+        name: isort lint
+        entry: poetry run isort .
         types:
           - python
         language: system

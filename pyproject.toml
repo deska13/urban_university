@@ -8,12 +8,35 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 
-
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.11.1"
-ruff = "^0.5.7"
 pylint = "^3.2.6"
 pre-commit = "^3.8.0"
+black = "^24.8.0"
+isort = "^5.13.2"
+
+[tool.isort]
+profile = "black"
+known_first_party = []
+skip = ["temp"]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+exclude = '''
+/(
+\.git
+| \.hg
+| \.mypy_cache
+| \.tox
+| \.venv
+| _build
+| buck-out
+| build
+| docker
+| temp
+)/
+'''
 
 [build-system]
 requires = ["poetry-core"]
