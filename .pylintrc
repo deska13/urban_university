@@ -5,6 +5,7 @@ disable =
     missing-module-docstring,
     comparison-of-constants,
     duplicate-value,
+    missing-module-docstring,
 ignore-paths =
     temp,
 extension-pkg-whitelist=
