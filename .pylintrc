@@ -6,6 +6,7 @@ disable =
     comparison-of-constants,
     duplicate-value,
     missing-module-docstring,
+    missing-function-docstring,
 ignore-paths =
     temp,
 extension-pkg-whitelist=
