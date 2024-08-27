@@ -3,7 +3,6 @@ def calculate_structure_sum(*args):
     for arg in args:
         if isinstance(arg, dict):
             for key, value in arg.items():
-                print(value)
                 struct_sum += calculate_structure_sum(key)
                 struct_sum += calculate_structure_sum(value)
         elif isinstance(arg, (list, tuple, set)):
