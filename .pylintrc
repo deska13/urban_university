@@ -7,6 +7,7 @@ disable =
     duplicate-value,
     missing-module-docstring,
     missing-function-docstring,
+    missing-class-docstring,
 ignore-paths =
     temp,
 extension-pkg-whitelist=
