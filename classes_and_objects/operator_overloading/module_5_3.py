@@ -23,27 +23,27 @@ class House:
     def __str__(self) -> str:
         return f"Название: {self.name}, кол-во этажей: {self.number_of_floors}"
 
-    def __eq__(self, other: Self) -> bool:
+    def __eq__(self, other) -> bool:
         self._check_type(other)
         return self.number_of_floors == other.number_of_floors
 
-    def __lt__(self, other: Self) -> bool:
+    def __lt__(self, other) -> bool:
         self._check_type(other)
         return self.number_of_floors < other.number_of_floors
 
-    def __le__(self, other: Self) -> bool:
+    def __le__(self, other) -> bool:
         self._check_type(other)
         return self.number_of_floors <= other.number_of_floors
 
-    def __gt__(self, other: Self) -> bool:
+    def __gt__(self, other) -> bool:
         self._check_type(other)
         return self.number_of_floors > other.number_of_floors
 
-    def __ge__(self, other: Self) -> bool:
+    def __ge__(self, other) -> bool:
         self._check_type(other)
         return self.number_of_floors >= other.number_of_floors
 
-    def __ne__(self, other: Self) -> bool:
+    def __ne__(self, other) -> bool:
         self._check_type(other)
         return self.number_of_floors != other.number_of_floors
 
