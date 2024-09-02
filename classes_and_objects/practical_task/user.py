@@ -28,5 +28,5 @@ class User:
             video.time_now += 1
             print(video.time_now, end=" ")
             time.sleep(1)
-        video.time_now = 0.0
+        video.time_now = 0
         print("Конец видео")
