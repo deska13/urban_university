@@ -3,12 +3,12 @@ class Video:
         self,
         title: str,
         duration: float,
-        # time_now: float = 0.0,
+        time_now: int = 0,
         adult_mode: bool = False,
     ) -> None:
         self.title = title
         self.duration = duration
-        # self.time_now = time_now в таком варианте для всех пользователей будет одно и то же время остановки видео
+        self.time_now = time_now
         self.adult_mode = adult_mode
 
     def __hash__(self) -> int:

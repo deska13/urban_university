@@ -25,7 +25,9 @@ class UrTube:
             if user.nickname == nickname:
                 print(f"Пользователь {nickname} уже существует")
                 return
-        self.users.append(User(nickname, password, age))
+        user = User(nickname, password, age)
+        self.current_user = user
+        self.users.append(user)
         print(f"Пользователь {nickname} успешно зарегистрирован")
         self.log_in(nickname, password)
 
@@ -45,3 +47,4 @@ class UrTube:
         for video in self.videos:
             if video.title == title:
                 self.current_user.watch(video)
+                break

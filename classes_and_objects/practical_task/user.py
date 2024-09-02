@@ -4,8 +4,6 @@ from video import Video
 
 
 class User:
-    watch_history: dict[Video, int] = {}
-
     def __init__(
         self,
         nickname: str,
@@ -20,16 +18,15 @@ class User:
         return f"{self.nickname}"
 
     def check_password(self, password: str) -> bool:
-
         return self.password == hash(password)
 
     def watch(self, video: Video) -> None:
         if video.adult_mode and self.age < 18:
             print("Вам нет 18 лет, пожалуйста покиньте страницу")
             return
-        self.watch_history[video] = 0
-        while self.watch_history[video] < video.duration:
-            self.watch_history[video] += 1
-            print(self.watch_history[video], end=" ")
+        while video.time_now < video.duration:
+            video.time_now += 1
+            print(video.time_now, end=" ")
             time.sleep(1)
+        video.time_now = 0.0
         print("Конец видео")
