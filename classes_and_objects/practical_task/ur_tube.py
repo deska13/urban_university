@@ -5,10 +5,10 @@ from video import Video
 class UrTube:
     users: list[User] = []
     videos: list[Video] = []
-    current_user: User | None = None
 
     def __init__(self) -> None:
         self.videos = []
+        self.current_user: User | None = None
 
     def log_in(self, nickname: str, password: str) -> None:
         for user in self.users:
@@ -46,5 +46,5 @@ class UrTube:
             return
         for video in self.videos:
             if video.title == title:
-                self.current_user.watch(video)
+                video.watch(self.current_user)
                 break
