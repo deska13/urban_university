@@ -21,8 +21,8 @@ class Bank:
         for _ in range(100):
             random_number = randint(50, 500)
             print(f"Запрос на {random_number}")
-            self.balance -= random_number
             if self.balance >= random_number:
+                self.balance -= random_number
                 print(f"Снятие: {random_number}. Баланс: {self.balance}")
             else:
                 print("Запрос отклонён, недостаточно средств")
