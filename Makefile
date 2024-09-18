@@ -1,5 +1,5 @@
 install-hooks:
-	pre-commit install
+	poetry run pre-commit install
 
 format-lint:
-	pre-commit run --all-files
+	poetry run pre-commit run --all-files
